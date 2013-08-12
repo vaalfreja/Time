@@ -44,49 +44,6 @@ public class TimeController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-//        firstRect.setOnMousePressed(new EventHandler<MouseEvent>() {
-//            @Override
-//            public void handle(MouseEvent event) {
-//                    x = firstRect.getLayoutX() - event.getSceneX();
-//                    y = firstRect.getLayoutY() - event.getSceneY();
-//                    logLabel.setText(x + " " + y);
-//            }
-//        });
-//        firstRect.setOnMouseDragged(new EventHandler<MouseEvent>() {
-//            @Override
-//            public void handle(MouseEvent event) {
-//                    logLabel.setText(logLabel.getText() + "\n"
-//                            + event.getScreenX() + " " + event.getScreenY());
-//                    firstRect.setLayoutX(event.getSceneX() + x);
-//                    firstRect.setLayoutY(event.getSceneY() + y);
-//            }
-//        });
-        /*final Ticket t = new Ticket("Test action",
-                new Date(2012, 12,12),
-                new Date(2012, 12,12));
-        firstRect.setOnDragDetected(new EventHandler<MouseEvent>() {
-            public void handle(MouseEvent event) {
-                Dragboard db = firstRect.startDragAndDrop(TransferMode.ANY);
-                ClipboardContent cc = new ClipboardContent();
-                cc.put(rectangleFormat, t); // something should be, or doesn't work
-                //TODO как запихнуть ректангл в драгбоард
-                db.setContent(cc);
-            }
-        });
-        pane2.setOnDragOver(new EventHandler<DragEvent>() {
-            public void handle(DragEvent dragEvent) {
-                dragEvent.acceptTransferModes(TransferMode.ANY);
-            }
-        });
-        pane2.setOnDragDropped(new EventHandler<DragEvent>() {
-            public void handle(DragEvent event) {
-                Dragboard db = event.getDragboard();
-                Ticket result = (Ticket)db.getContent(rectangleFormat);
-                TicketUI ticket = new TicketUI();
-                pane2.getChildren().add(ticket);
-                event.setDropCompleted(true);
-            }
-        });    */
     }
 
     @FXML
