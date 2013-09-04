@@ -44,6 +44,34 @@ public class TimeController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        TicketUI tick1 = new TicketUI("t1");
+        TicketUI tick2 = new TicketUI("t2");
+        TicketUI tick3 = new TicketUI("t3");
+        todo.getChildren().add(tick1);
+        completed.getChildren().add(tick2);
+        passed.getChildren().add(tick3);
+        initPane(todo);
+        initPane(completed);
+        initPane(passed);
+    }
+
+    private void initPane(Pane pane) {
+        pane.setOnDragOver(new EventHandler<DragEvent>() {
+            @Override
+            public void handle(DragEvent dragEvent) {
+                dragEvent.acceptTransferModes(TransferMode.ANY);
+            }
+        });
+        pane.setOnDragDropped(new EventHandler<DragEvent>() {
+            @Override
+            public void handle(DragEvent dragEvent) {
+                Dragboard db = dragEvent.getDragboard();
+                Ticket result = (Ticket)db.getContent(TicketUI.ticketFormat);
+                TicketUI ticketUI = new TicketUI(result);
+                Pane source = (Pane)dragEvent.getSource();
+                source.getChildren().add(ticketUI);
+            }
+        });
     }
 
     @FXML

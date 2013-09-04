@@ -21,6 +21,7 @@ public class Ticket implements java.io.Serializable{
     public Date Added, Deadline;
     public Color currentColor;
     private DateFormat formatter = new SimpleDateFormat("DD.MM.YY HH:MM");
+    public int Status;
 
     public Ticket(String action, String added, String deadline) {
         Action = action;
