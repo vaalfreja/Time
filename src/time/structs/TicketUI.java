@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.input.*;
 
@@ -39,7 +40,7 @@ public class TicketUI extends StackPane implements Serializable{
                     ClipboardContent cc = new ClipboardContent();
                     cc.put(ticketFormat, selfLink.getTicket());
                     db.setContent(cc);
-                    Pane p = (Pane)selfLink.getParent();
+                    VBox p = (VBox)selfLink.getParent();
                     p.getChildren().remove(selfLink);
                 }
             });

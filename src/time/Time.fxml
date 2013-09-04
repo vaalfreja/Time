@@ -18,9 +18,9 @@
               <children>
                 <HBox prefHeight="369.0" prefWidth="600.0">
                   <children>
-                    <Pane fx:id="todo" prefHeight="200.0" prefWidth="200.0" styleClass="borderedPane"/>
-                    <Pane fx:id="completed" prefHeight="200.0" prefWidth="200.0" styleClass="borderedPane"/>
-                    <Pane fx:id="passed" prefHeight="200.0" prefWidth="200.0" styleClass="borderedPane"/>
+                    <VBox fx:id="todo" prefHeight="200.0" prefWidth="200.0" styleClass="borderedPane"/>
+                    <VBox fx:id="completed" prefHeight="200.0" prefWidth="200.0" styleClass="borderedPane"/>
+                    <VBox fx:id="passed" prefHeight="200.0" prefWidth="200.0" styleClass="borderedPane"/>
                   </children>
                 </HBox>
               </children>

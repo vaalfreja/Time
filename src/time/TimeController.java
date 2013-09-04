@@ -15,6 +15,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.scene.media.AudioClip;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -34,7 +35,7 @@ public class TimeController implements Initializable {
     @FXML
     AnchorPane main;
     @FXML
-    Pane todo, completed, passed;
+    VBox todo, completed, passed;
 
     static public List<Ticket> data;
     static double x, y;
@@ -55,7 +56,7 @@ public class TimeController implements Initializable {
         initPane(passed);
     }
 
-    private void initPane(Pane pane) {
+    private void initPane(VBox pane) {
         pane.setOnDragOver(new EventHandler<DragEvent>() {
             @Override
             public void handle(DragEvent dragEvent) {
@@ -68,7 +69,7 @@ public class TimeController implements Initializable {
                 Dragboard db = dragEvent.getDragboard();
                 Ticket result = (Ticket)db.getContent(TicketUI.ticketFormat);
                 TicketUI ticketUI = new TicketUI(result);
-                Pane source = (Pane)dragEvent.getSource();
+                VBox source = (VBox)dragEvent.getSource();
                 source.getChildren().add(ticketUI);
             }
         });
